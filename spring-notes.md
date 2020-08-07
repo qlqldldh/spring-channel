@@ -24,4 +24,8 @@ DB 접속 정보를 application server에서 관리 -> application으로부터 D
 사전에 DB 준비 필요 없이 application 기동할 때 DataSource 설정과 생서이 자동으로 이루어짐<br>
 프로토타입용 or 각종 지원툴이나 관리 툴 성격의 application 개발에 많이 활용. (mission-critical한 환경에선느 사용X)
 ```
-
+4. Spring JDBC를 사용하기 전 기본 세팅
+  - odbc6.jar (Maven을 통해 해소)
+  - spring-jdbc in Maven
+5. 자바 기반 설정을 사용하고 싶다면 (@Configuration)
+  - cglib in Maven
