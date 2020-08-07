@@ -27,5 +27,6 @@ DB 접속 정보를 application server에서 관리 -> application으로부터 D
 4. Spring JDBC를 사용하기 전 기본 세팅
   - odbc6.jar (Maven을 통해 해소)
   - spring-jdbc in Maven
+  - jdbcTemplate에 내장된 메소드가 가끔 없는 취급 당한다면 -> 다른 버전의 spring-jdbc를 
 5. 자바 기반 설정을 사용하고 싶다면 (@Configuration)
   - cglib in Maven
