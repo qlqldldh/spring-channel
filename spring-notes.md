@@ -32,3 +32,4 @@ DB 접속 정보를 application server에서 관리 -> application으로부터 D
   - cglib in Maven
 6. spring jdbc를 유연하게 사용하고 싶다면
   - spring version -> 5.2.6
+7. spring jdbc -- rowmapper를 lambda식으로 표현하려면 Java SE 1.8 이상이어야 함
