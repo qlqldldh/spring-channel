@@ -33,3 +33,6 @@ DB 접속 정보를 application server에서 관리 -> application으로부터 D
 6. spring jdbc를 유연하게 사용하고 싶다면
   - spring version -> 5.2.6
 7. spring jdbc -- rowmapper를 lambda식으로 표현하려면 Java SE 1.8 이상이어야 함
+8. spring을 활용한 validation 방법
+  - https://parkwonhui.github.io/spring/2019/04/22/spring-valid-bindingresult.html
+  
