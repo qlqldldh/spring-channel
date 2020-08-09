@@ -30,6 +30,7 @@
 		<th>Gift Name</th>
 		<th>G_Start</th>
 		<th>G_End</th>
+		<th>Option</th>
 	</tr>
 	<c:forEach var="itm" items="${gifts }">
 	<tr>
@@ -37,11 +38,18 @@
 		<td>${itm.gname }</td>
 		<td>${itm.g_start }</td>
 		<td>${itm.g_end }</td>
+		<td><button onclick="deleteGift(${itm.gno})" name="del" id="del">Delete</button></td>
 	</tr>
 	</c:forEach>
 </table>
 
 <button onclick="location.href='insert'" name="btn">Insert Gift Info</button>
 
+<script>
+	function deleteGift(gno){
+		alert('Delete Successfully!');
+		location.href='delete?gno='+gno;
+	}
+</script>
 </body>
 </html>

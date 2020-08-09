@@ -18,8 +18,10 @@ public class GiftVO implements Serializable{
 	@Size(max=100)
 	private String gname;
 	
+	@NotNull
 	private int g_start;
 	
+	@NotNull
 	private int g_end;
 
 	

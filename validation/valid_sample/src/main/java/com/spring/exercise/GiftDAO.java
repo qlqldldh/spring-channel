@@ -42,4 +42,14 @@ public class GiftDAO {
 		if(gv.getGname().equals("")) throw new Exception(); // 이렇게 하면 TestController로 exception을 위임함
 		return jdbcTemplate.update(sql,gv.getGno(),gv.getGname(),gv.getG_start(),gv.getG_end());
 	}
+	
+	public int insertGift2(GiftVO gv) {
+		String sql="insert into gift values(?,?,?,?)";
+		return jdbcTemplate.update(sql,gv.getGno(),gv.getGname(),gv.getG_start(),gv.getG_end());
+	}
+	
+	public int deleteGift(String gno) {
+		String sql="delete from gift where gno=?";
+		return jdbcTemplate.update(sql,gno);
+	}
 }
