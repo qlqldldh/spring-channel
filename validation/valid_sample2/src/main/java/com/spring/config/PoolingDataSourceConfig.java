@@ -34,8 +34,8 @@ public class PoolingDataSourceConfig {
 		BasicDataSource dataSource = new BasicDataSource();
 		dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
 		dataSource.setUrl("jdbc:oracle:thin:@127.0.0.1:1521:XE");
-		dataSource.setUsername("ssssuu");
-		dataSource.setPassword("9531");
+		dataSource.setUsername("username");
+		dataSource.setPassword("password");
 		dataSource.setDefaultAutoCommit(true);
 		dataSource.setMaxTotal(96);
 		dataSource.setMaxIdle(16);
