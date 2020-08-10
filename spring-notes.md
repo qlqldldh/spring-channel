@@ -38,3 +38,22 @@ DB 접속 정보를 application server에서 관리 -> application으로부터 D
   
 ## Java에서 Annotation을 작성하는 방법
   - https://elfinlas.github.io/2017/12/14/java-custom-anotation-01/
+
+## 예외 처리
+  - 예외 종류
+```
+1. 시스템 예외 : 처리를 계속 할 수 없는 예외.
+(application 자체 버그, 의존 라이브러리 버그, 하드웨어 고장, 시스템 리소스 고갈, 네트워크 장애 등)
+2. 잘못된 요청 예외 : 잘못된 요청으로 발생하는 예외
+(존재하지 않는 경로 요청, 바인딩 오류, 입력값 검사 오류 등)
+3. 애플리케이션 예외 : 비즈니스 규칙을 위반했을 때 발생하는 예외
+(사용자 등록 시 ID 중복 오류, 재고 부족 오류 등)
+```
+
+  - 예외 발생 장소
+```
+Servlet Filter, DispatcherServlet, Application(Controller,Repository etc), View(JSP etc)
+```
+
+  - Exception Handler given by Spring MVC
+  
