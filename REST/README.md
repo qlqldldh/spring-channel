@@ -13,7 +13,7 @@ REST API는 DB 등에서 관리되는 정보에서 Client에 제공할 정보를
 > Client에 제공할 정보는 웹에서 resource로 공개. 즉 HTTP 프로토콜을 사용해 resource에 접근 가능
 
 ### 2. URI를 통한 resource 식별
-> 웹에 공개할 resource에는 그 resource를 고유하게 식별할 수 있는 URI응 랑잔래 같은 네트워크에 연결돼 있다면 어디서든 같은 resource에 접근 가능
+> 웹에 공개할 resource에는 그 resource를 고유하게 식별할 수 있는 URI를 할당해 같은 네트워크에 연결돼 있다면 어디서든 같은 resource에 접근 가능
 
 ### 3. HTTP 메서드를 통한 resource 조작
 > resource에 대한 CRUD 조작은 HTTP 메서드(GET, POST, PUT, DELETE 등)를 용도에 맞게 잘 나눠서 구현해야 함
