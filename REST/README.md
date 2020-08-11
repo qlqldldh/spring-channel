@@ -96,4 +96,35 @@ REST API는 DB 등에서 관리되는 정보에서 Client에 제공할 정보를
 
 #### HttpMessageConverter
 ![messageconverter](https://user-images.githubusercontent.com/60098657/89869750-c232d780-dbef-11ea-9c69-e73646345e8f.png)
+<br>
 (from : https://sjh836.tistory.com/141)
+
+
+## Application Setting
+### Library Setting
+```
+<dependency>
+    <\groupId>\com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.10.0</version>
+</dependency>
+```
+
+### Servlet Container Setting
+#### HiddenHttpMethodFilter
+> GET & POST만 지원하는 REST Client를 지원해야 할 때 사용<br>
+```
+<filter>
+  <filter-name>HiddenHttpMessageFilter</filter-name>
+  <filter-class>org.springframework.web.filter.HiddenHttpMessageFilter</filter-class>
+</filter>
+
+<filter-mapping>
+  <filter-name>HiddenHttpMessageFilter</filter-name>
+  <url-patterm>/*</url-patter>
+</filter-mapping>
+```
+
+### Front Controller Setting
+> 기존 설정과 동일하나, ViewResolver에 대한 설정은 필요없음.
+
