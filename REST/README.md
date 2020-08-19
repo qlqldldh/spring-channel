@@ -161,6 +161,7 @@ REST API는 DB 등에서 관리되는 정보에서 Client에 제공할 정보를
   > application에서 에러가 발생하면 그 오류가 어떤 유형인지 판단하고, 그 오류 상황에 맞는 적절한 조치를 해야할 때 구현하는 인터페이스<br>
   > HTTP 상태 코드의  400 번대 오류를 처리할 수 있는 인터페이스
 #### RestTemplate 설정
+- pom.xml 설정
 ```
 <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
 <dependency>
@@ -186,6 +187,15 @@ REST API는 DB 등에서 관리되는 정보에서 Client에 제공할 정보를
     <artifactId>jackson-core</artifactId>
     <version>2.9.7</version>
 </dependency>
+```
+<br>
+
+- java 기반 설정 방식의 bean 정의
+```
+@Bean
+RestTemplate restTemplate(){
+  return new RestTemplate();
+}
 ```
 
 
