@@ -14,11 +14,11 @@
 <table>
 	<tr>
 		<td>Username</td>
-		<td><input name="username">&nbsp;<c:if test="${errs.username!=null }"><font color='red'>errs.username</font></c:if></td>
+		<td><input name="username">&nbsp;<c:if test="${username!=null }"><font color='red'>${username }</font></c:if></td>
 	</tr>
 	<tr>
 		<td>Title</td>
-		<td><input name="title">&nbsp;<c:if test="${errs.title!=null }"><font color='red'>errs.title</font></c:if></td>
+		<td><input name="title">&nbsp;<c:if test="${title!=null }"><font color='red'>${title }</font></c:if></td>
 	</tr>
 	<tr>
 		<td>Contents</td>

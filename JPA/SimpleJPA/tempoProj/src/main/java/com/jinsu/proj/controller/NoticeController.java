@@ -1,6 +1,5 @@
 package com.jinsu.proj.controller;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -33,8 +32,9 @@ public class NoticeController {
 	
 	@GetMapping("writeNotice")
 	public String goWriteNotice(@RequestParam(required=false) Map<String,String> errs, Model model) {
-		if(errs!=null) {
-			// should be handle //
+		if(!errs.isEmpty()) { // make REST API for validation may be more efficient
+			model.addAttribute("username",errs.get("username"));
+			model.addAttribute("title",errs.get("title"));
 		}
 		
 		return "writeNotice";
@@ -59,17 +59,14 @@ public class NoticeController {
 	@PostMapping("write")
 	public String writeNotice(@Validated NoticeVO nv, BindingResult result,Model model) {
 		if(result.hasErrors()) {
-			Map<String,String> mp = new HashMap<>();
 			List<ObjectError> errs = result.getAllErrors();
 			
 			for(ObjectError err:errs) {
 				String[] erInfo = err.getDefaultMessage().split(":");
 				
-				mp.put(erInfo[0],erInfo[1]);
+				model.addAttribute(erInfo[0],erInfo[1]);
 			}
-			System.out.println("username : "+mp.get("username"));
-			System.out.println("title : "+mp.get("title"));
-			model.addAttribute("errs",mp);
+
 			return "redirect:writeNotice";
 		} 
 		noticeService.regisNewNotice(nv);
