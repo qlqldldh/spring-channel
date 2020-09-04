@@ -20,4 +20,19 @@ public class NoticeService {
 	public List<NoticeVO> showNotices(){
 		return noticeRepos.selectAllByJpa();
 	}
+	
+	public void regisNewNotice(NoticeVO vo) {
+		noticeRepos.insertByJpa(vo);
+		System.out.println("inserted");
+	}
+	
+	public void deleteNotice(String title) {
+		noticeRepos.deleteByJpa(title);
+		System.out.println("deleted");
+	}
+	
+	public void updateNotice(String title, String content) {
+		noticeRepos.updateByJpa(title, content);
+		System.out.println("updated");
+	}
 }

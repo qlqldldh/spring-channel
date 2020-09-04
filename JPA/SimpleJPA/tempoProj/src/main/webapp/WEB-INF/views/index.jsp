@@ -11,14 +11,18 @@
 
 <!-- <button onclick="location.href='notice'">Go Notice List</button> -->
 
-<form action="notice" method="post">
+<form action="list" method="get">
 <input type="submit" value="Go Notice">
 </form>
 <br><br>
 
-<form action="noticeDetail" method="post">
+<h2>Search by Title</h2>
+<form action="detail" method="post">
 Title : <input name="title"><br><br>
 <input type="submit" value="Go Detail">
 </form>
+<br><br>
+
+<button onclick="location.href='writeNotice'">Insert Notice</button>
 </body>
 </html>

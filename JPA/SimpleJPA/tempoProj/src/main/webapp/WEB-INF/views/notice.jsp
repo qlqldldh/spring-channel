@@ -16,6 +16,7 @@
 	<th>Title</th>
 	<th>Contents</th>
 	<th>Date</th>
+	<th>Options</th>
 </tr>
 <c:forEach var="itm" items="${list }">
 <tr>
@@ -23,10 +24,14 @@
 	<td>${itm.title }</td>
 	<td>${itm.ncontents }</td>
 	<td>${itm.ndate }</td>
+	<td><button onclick="location.href='delete?title=${itm.title}'">Delete</button>
+			&nbsp; <button onclick="location.href='updateNotice?title=${itm.title}'">modify Content</button></td>
 </tr>
 </c:forEach>
 </table>
+<br><br>
 
+<button onclick="location.href='index'">Go Index Page</button>
 
 </body>
 </html>

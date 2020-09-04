@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name="notice")
@@ -15,11 +15,13 @@ public class NoticeVO implements Serializable{
 	private static final long serialVersionUID = -3437472533334089068L;
 	
 	@Column(name="username")
+	@NotEmpty(message="username:empty value is not allowed")
 	private String username;
 	
 	@Id
-	@GeneratedValue
+//	@GeneratedValue // when is it used????
 	@Column(name="title")
+	@NotEmpty(message="title:empty value is not allowed")
 	private String title;
 	
 	@Column(name="ncontents")
@@ -64,7 +66,6 @@ public class NoticeVO implements Serializable{
 	
 	@Override
 	public int hashCode() {
-		// TODO Auto-generated method stub
 		return title.hashCode();
 	}
 	

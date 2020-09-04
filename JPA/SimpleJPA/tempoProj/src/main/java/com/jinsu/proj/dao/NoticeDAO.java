@@ -6,7 +6,6 @@ import java.util.Map;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -54,5 +53,17 @@ public class NoticeDAO {
 		nv.setNdate((String)result.get("ndate"));
 		
 		return nv;
+	}
+	
+	public void insertByTemp(NoticeVO nv) {
+		String sql = "insert into notice values(?,?,?,?)";
+		jdbcTemplate.update(sql,nv.getUsername(),nv.getTitle(),nv.getNcontents(),nv.getNdate());
+		// inconvenient process because of many arguments
+	}
+	
+	public void deleteByTemp(String title) {
+		String sql = "delete from notice where title=?";
+		
+		jdbcTemplate.update(sql,title);
 	}
 }
