@@ -11,3 +11,10 @@
 
 
 ### 2. JPA Practice with Spring Data JPA
+
+
+
+## Reference
+- LAZY Fetch<br>
+: https://victorydntmd.tistory.com/210
+
