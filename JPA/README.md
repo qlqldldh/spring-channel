@@ -18,3 +18,5 @@
 - LAZY Fetch<br>
 : https://victorydntmd.tistory.com/210
 
+- how to check query in a process<br>
+: https://lannstark.tistory.com/14
