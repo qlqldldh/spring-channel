@@ -57,3 +57,8 @@ Servlet Filter, DispatcherServlet, Application(Controller,Repository etc), View(
 
   - Exception Handler given by Spring MVC
   : https://cheese10yun.github.io/spring-guide-exception/
+  
+## RESTful Service
+> reference 'REST' package
+
+
