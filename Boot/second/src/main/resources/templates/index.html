@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Thymeleaf Test Page</title>
+</head>
+<body>
+
+<h1>Hello World!</h1>
+
+<p th:text="${test}"></p>
+
+<div th:utext="${cds}"></div>
+
+<p th:unless="${usr}=='gen'" th:text="${my}">
+
+<hr>
+
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Grade</th>
+		<th>Group</th>
+	</tr>
+	<tr th:each="student:${students}">
+		<td th:text="${student.studid}">
+		<td th:text="${student.stname}">
+		<td th:text="${student.grade}">
+		<td th:text="${student.stgroup}">
+	</tr>
+</table>
+
+<hr>
+
+<a th:href="@{move}">Move to another page</a>
+
+</body>
+</html>
+
+
+
