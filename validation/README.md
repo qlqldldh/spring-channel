@@ -5,3 +5,6 @@
 1. Validation by throwing exception from DAO & Making Validation part with spring concepts weekly
 2. Validation by <b>Spring framework</b> by using validator interface & hibernate-validator
 
+## References
+- https://meetup.toast.com/posts/223
+
